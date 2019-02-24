@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/die_text"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="Die"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/quantity_text"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="Quantity"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@id/die_text"
+        app:layout_constraintRight_toLeftOf="@id/bonus_text"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bonus_text"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="Bonus"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@id/quantity_text"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/d4_image"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_d4"
+        android:tint="@color/colorPrimaryDark"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/die_text" />
+
+    <EditText
+        android:id="@+id/d4_quantity_edit"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textCursorDrawable="@null"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@id/d4_image"
+        app:layout_constraintRight_toLeftOf="@id/d4_bonus_edit"
+        app:layout_constraintTop_toBottomOf="@id/die_text" />
+
+    <EditText
+        android:id="@+id/d4_bonus_edit"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:inputType="numberSigned"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textCursorDrawable="@null"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@id/d4_quantity_edit"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/die_text" />
+
+    <ImageView
+        android:id="@+id/d6_image"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_perspective_dice_six"
+        android:tint="@color/colorPrimaryDark"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/d4_image" />
+
+    <EditText
+        android:id="@+id/d6_quantity_edit"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textCursorDrawable="@null"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@id/d4_image"
+        app:layout_constraintRight_toLeftOf="@id/d4_bonus_edit"
+        app:layout_constraintTop_toBottomOf="@id/d4_image" />
+
+    <EditText
+        android:id="@+id/d6_bonus_edit"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:inputType="numberSigned"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textCursorDrawable="@null"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@id/d4_quantity_edit"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/d4_image" />
+
+    <ImageView
+        android:id="@+id/d8_image"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_dice_eight_faces_eight"
+        android:tint="@color/colorPrimaryDark"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/d6_image" />
+
+    <EditText
+        android:id="@+id/d8_quantity_edit"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textCursorDrawable="@null"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@id/d4_image"
+        app:layout_constraintRight_toLeftOf="@id/d4_bonus_edit"
+        app:layout_constraintTop_toBottomOf="@id/d6_image" />
+
+    <EditText
+        android:id="@+id/d8_bonus_edit"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:inputType="numberSigned"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textCursorDrawable="@null"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@id/d4_quantity_edit"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/d6_image" />
+
+    <ImageView
+        android:id="@+id/d10_image"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_d10"
+        android:tint="@color/colorPrimaryDark"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/d8_image" />
+
+    <EditText
+        android:id="@+id/d10_quantity_edit"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textCursorDrawable="@null"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@id/d4_image"
+        app:layout_constraintRight_toLeftOf="@id/d4_bonus_edit"
+        app:layout_constraintTop_toBottomOf="@id/d8_image" />
+
+    <EditText
+        android:id="@+id/d10_bonus_edit"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:inputType="numberSigned"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textCursorDrawable="@null"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@id/d4_quantity_edit"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/d8_image" />
+
+    <ImageView
+        android:id="@+id/d12_image"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_d12"
+        android:tint="@color/colorPrimaryDark"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/d10_image" />
+
+    <EditText
+        android:id="@+id/d12_quantity_edit"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textCursorDrawable="@null"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@id/d4_image"
+        app:layout_constraintRight_toLeftOf="@id/d4_bonus_edit"
+        app:layout_constraintTop_toBottomOf="@id/d10_image" />
+
+    <EditText
+        android:id="@+id/d12_bonus_edit"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:inputType="numberSigned"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textCursorDrawable="@null"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@id/d4_quantity_edit"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/d10_image" />
+
+    <ImageView
+        android:id="@+id/d20_image"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_dice_twenty_faces_twenty"
+        android:tint="@color/colorPrimaryDark"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/d12_image" />
+
+    <EditText
+        android:id="@+id/d20_bonus_edit"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:inputType="numberSigned"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textCursorDrawable="@null"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@id/d4_quantity_edit"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/d12_image" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/roll_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/ic_cubes"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/d20_image" />
+
+    <TextView
+        android:id="@+id/attack_text"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:rotation="-45"
+        android:text="Attack"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/damage_text"
+        app:layout_constraintTop_toBottomOf="@id/roll_button" />
+
+    <TextView
+        android:id="@+id/attack_result_text"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:rotation="-45"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/damage_result_text"
+        app:layout_constraintTop_toBottomOf="@id/roll_button" />
+
+    <TextView
+        android:id="@+id/damage_text"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:rotation="45"
+        android:text="Damage"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/attack_text"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/roll_button" />
+
+    <TextView
+        android:id="@+id/damage_result_text"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:rotation="45"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/attack_result_text"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/roll_button" />
+
+
+</android.support.constraint.ConstraintLayout>
